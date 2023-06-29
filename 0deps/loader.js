@@ -157,11 +157,11 @@
       ///////////////////////////////////////////////////////////////////////////////////////////
 
       loader.items.just.saved = new Set();
-      loader.tmpdata = [];
+      // loader.tmpdata = [];
 
       loader.onfile = (method, path, stats) => {
         const key = mkp.f2nw(mkp.f2wn(parseXYPath(path)));
-        loader.tmpdata.push({path, method, stats, key});
+        // loader.tmpdata.push({path, method, stats, key});
         // loader.log.info(' :: READ FILE :::', path, key, loader.config.path);
         // loader.log.info("LOADER ONFILE", method, path, stats, key)
         // Prevent load and run just saved code
