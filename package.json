@@ -1,5 +1,12 @@
 {
-  "name": "mkp",
+  "name": "mkp", 
+   "description": "Utility for downloading artifacts from different versions of Electron",
+  "version": "0.5.2",
+  "files": [
+    "0deps/*",
+    "run.js",
+    "README.md"
+  ],
   "bin": {
     "mkp": "run.js"
   },
