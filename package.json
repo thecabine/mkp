@@ -1,0 +1,19 @@
+{
+  "name": "mkp",
+  "bin": {
+    "mkp": "run.js"
+  },
+  "main": "0deps/boot.js",
+  "scripts": {
+    "start": "node run.js",
+    "start-electron": "electron run.js"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "socket.io": "^4.5.4",
+    "socket.io-client": "^4.5.4"
+  },
+  "optionalDependencies": {
+    "electron": "^22.0.0"
+  }
+}
