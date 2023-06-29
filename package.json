@@ -1,6 +1,6 @@
 {
   "name": "mkp", 
-   "description": "Utility for downloading artifacts from different versions of Electron",
+   "description": "Unusual, experimental, infinity Matrix Key Point runtime for JS",
   "version": "0.5.2",
   "files": [
     "0deps/*",
