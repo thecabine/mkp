@@ -86,7 +86,7 @@
           // console.log('BASE -- ', M['mkp,f2nw'](BUF), prop)
           const high = M[[...nextBUF, 'onset']];
           if (high) {
-            console.log('HIGH -- ', high);
+            // console.log('HIGH -- ', high);
             if (!high(M, nextBUF, value)) return false;
           }
           M[nextBUF] = value;
