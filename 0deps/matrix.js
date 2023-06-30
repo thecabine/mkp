@@ -53,11 +53,14 @@
         },
         rerunfn: (mKey, photon, delay = 0) => {
           const pcode = M['matrix,pstore'][mKey];
-          if (pcode && pcode.repeat != 3)
+          // console.log(mKey,pcode, ['PHO',photon.x,photon.y], [pcode.repeat, pcode && pcode.repeat <= 3])
+          if (pcode && (pcode.repeat == undefined || pcode.repeat <= 3))
             setTimeout(() => {
               pcode.repeat = (pcode.repeat || 0) + 1;
               photon.x = mKey[0];
               photon.y = mKey[1];
+              photon.z = mKey[2];
+              photon.w = mKey[3];
               const result = M['matrix,runfn'](pcode, photon);
 
               if (typeof result !== 'undefined') M[mKey] = result;
