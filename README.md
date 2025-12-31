@@ -1,17 +1,17 @@
-## Unusual, experimental, infinity Matrix Key Point runtime for JS
+## Unusual, experimental, infinity Matrix Kernel Protocol runtime for JS
 
 <br/>
-
-**MKP (Matrix Key Point) - это система программирования на основе матриц, которая представляет собой новый подход к организации и управлению кодом. Она была разработана с целью предоставить более гибкий и мощный способ работы с данными и функциями.**
-
-<br/>
-
-*Данная сборка содержит: ядро MKP-minimal, утититы матриц, синхронный файл вотчер и другие полезные примеры (REPL, HTTP, Socket, Electron, Browser...)*
-
+⚠️ ARCHIVE / PROOF OF CONCEPT. This repository contains the V1 prototype of the Matrix Kernel Protocol (2022). Current development (V2/Next-Gen) with security sealing, AI-adapters, and high-performance topology is active in a private repository. Contact author for access."
+**MKP (Matrix Kernel Protocol) is a matrix-based programming system that represents a new approach to code organization and management. It was developed to provide a more flexible and powerful way to work with data and functions.**
 <br/>
 <br/>
 
-### Устоновить `mkp` как глобальную команду для терминала
+*This build contains: the MKP-minimal core, matrix utilities, a synchronous file watcher, and other useful examples (REPL, HTTP, Socket, Electron, Browser...)*
+
+<br/>
+<br/>
+
+### Install `mkp` as a global terminal command
 
 > `yarn global add https://github.com/thecabine/mkp`
 
@@ -20,7 +20,7 @@
 <br/>
 ----
 
-## Установка и запуск локально:
+## Local installation and launch:
 
 ```bash
 git clone https://github.com/thecabine/mkp
@@ -29,17 +29,17 @@ yarn
 yarn start
 ```
 
-Теперь система полностью запущена и активирована REPL консоль
+Now the system is fully running and the REPL console is activated.
 
-> `yarn link` or `npm link` - install global bin executive
-
-<br/>
-
-## Начало использования:
+> `yarn link` or `npm link` - installs global bin executive
 
 <br/>
 
-При выполнении данного кода в консоли мы запишем ячейку <u>**examples.hello**</u>
+## Getting Started:
+
+<br/>
+
+By executing this code in the console, we will write to the cell <u>**examples.hello**</u>
 
 
 ```bash
@@ -50,7 +50,7 @@ yarn start
 
 <br/>
 
-Синхронно создасться файл где запишеться простой код для MKP
+A file will be synchronously created where simple MKP code will be written.
 
  > __rootDir_/examples/hello.js
 
@@ -62,7 +62,7 @@ return `any string content`
 
 <br/>
 
-Откройте файл в любом редакторе и измените возвращаемый текст
+Open the file in any editor and change the returned text.
 
 
 ```js
@@ -73,7 +73,7 @@ return `Hello World! welcome string content`
 
 <br/>
 
-Достаточно сохранить изменения `Cmd+S` и ячейка <u><strong>examples.hello</strong></u> обновлена, проверьте в консоли
+Just save the changes (`Cmd+S`) and the <u><strong>examples.hello</strong></u> cell is updated; check it in the console:
 
 ```bash
 > _MKP().examples.hello
@@ -83,7 +83,7 @@ return `Hello World! welcome string content`
 
 <br/>
 
-Создайте новый файл `examples/myfunc.js` со следующим кодом
+Create a new file `examples/myfunc.js` with the following code:
 
 ```js
 MKP;
@@ -93,7 +93,7 @@ return (prefix='')=>prefix + ' : ' + MKP().examples.hello;
 
 <br/>
 
-Выполните следующую комманду в консоли
+Execute the following command in the console:
 
 ```bash
 > _MKP().examples.myfunc('Wow!')
@@ -103,21 +103,21 @@ return (prefix='')=>prefix + ' : ' + MKP().examples.hello;
 
 <br/>
 
-Поекспериментируйте в консоли с етими примерами и посмотрите файлы
+Experiment in the console with these examples and take a look at the files:
 
 ```bash
 > _MKP().examples.yourfunc = ()=>'Awesome'
 > _MKP().examples.data01 = {have:'fun', play:'more'}
 > _MKP().examples.list.deep.path = ['Find me at', 'exan2zth/1atma.js']
-  // здесь происходит сжатие пути к 2 измерениям [x,y] --- *инфо ниже*
+  // here the path is compressed to 2 dimensions [x,y] --- *info below*
 >
 ```
 <br/>
 
 <details>
-  <summary>Более сложный пример кода для MKP вместе с Electron </summary>
+  <summary>A more complex MKP code example with Electron</summary>
 
-  > требуеться запустить как `yarn start-electron`
+  > requires running as `yarn start-electron`
 
 <br/>
   
@@ -161,7 +161,7 @@ return {
 
 <br/>
 
-Теперь в результате если в консоли запросить нужную нам МКП мы получим ответ
+Now, as a result, if we request the MKP we need in the console, we will get a response:
 
 ```bash
 > _MKP().examples.displ
@@ -194,9 +194,9 @@ return {
 
 <br/>
 
-MKP позволяет вам обращаться к данным из любого места вашей программы без прямой ссылки на их исходное местоположение.
+MKP allows you to access data from anywhere in your program without a direct reference to its source location.
 
-Это как магия, где вы можете модифицировать свой код в режиме реального времени, экспериментировать, отлаживать и видеть результаты немедленно. 
+It is like magic, where you can modify your code in real-time, experiment, debug, and see results immediately.
 
 -----
 
@@ -207,34 +207,33 @@ MKP позволяет вам обращаться к данным из любо
 -----
 
 # WORK IN PROGRESS
-> для легчего понимания дальнейшего рекомендую рассматривать данную версию как личную лабораторию, сандбокс плейграунд
+> For easier understanding of what follows, I recommend treating this version as a personal laboratory, a sandbox playground.
 
 
 
-### !!! реагирует на каждое сохранение любого файла
+### !!! reacts to every save of any file
 
-# что тут посмотреть/потрогать:
+# What to look at / touch here:
 
- - папка `sandbox/`
- - сохрани пару раз `run/0repl.js` файл - включиться/выключиться интерактивная консоль
- - coздай файл в любой папке и он автоматом запуститься
+ - folder `sandbox/`
+ - save the `run/0repl.js` file a couple of times - the interactive console will turn on/off
+ - create a file in any folder and it will launch automatically
  
 
-## код
- - на первой строке находиться список подключаемых имен `MKP,P,text,nest` - в загрузчике(`0deps/loader.js`) происходит парсинг етой секции кода - _покачто так но можно как угодно_
-   - MKP - нулевые координаты 
-   - P - фотон - про него отдельно 
-   - любые имена [0-9a-z] возвращяют MKP([current X, <name>]) смещение для удобства запроса близлежащих файлов
-## правила, имена
+## Code
+ - On the first line is a list of injected names `MKP,P,text,nest` - in the loader (`0deps/loader.js`) this code section is parsed - *for now it is like this, but it can be done however you like*.
+   - MKP - zero coordinates
+   - P - photon - more on that separately
+   - Any names [0-9a-z] return MKP([current X, <name>]) offset for convenient requesting of nearby files.
 
-по стандарту для чтения матрицы используеться паттерн 
+## Rules, Names
+
+By standard, the following pattern is used to read the matrix:
 ```
 <directory>/<file>.js 
-где directory как (X) а file как (Y) координаты
+where directory is (X) and file is (Y) coordinates
 ```
 
-в основе используеться преобразование с 36-ричной стринги в integer `parseInt(s, 36)`, рекомендуеться исползовать не более 10 символов чтобы упираться в предел 32BIT integer(-/+), возможно расширить поле используя  BigInt или другие счисления
+Basically, conversion from a base-36 string to an integer `parseInt(s, 36)` is used. It is recommended to use no more than 10 characters to stay within the 32BIT integer limit (-/+). It is possible to expand the field using BigInt or other numeral systems.
 
-0file - свойство number игнорировать нули в начале числа позволяет создать неперезаписывамый файл `000test -> test; 00 -> 0`, а именно никогда не будет числа с нулями в начале, что математически гарантирует невозможность автозаписи в такой файл, но при чтении `return <exept undefined>` с данного файла установиться на действитльную координату
-
-
+0file - the number property of ignoring leading zeros allows creating a non-overwritable file `000test -> test; 00 -> 0`. Namely, there will never be a number with leading zeros, which mathematically guarantees the impossibility of auto-writing to such a file. However, when reading, `return <exept undefined>` from this file will resolve to the actual coordinate.
